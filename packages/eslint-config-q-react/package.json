@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Q linting for React",
   "author": "Qompium",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": "https://github.com/fibricheck/q-linting",
   "main": "index.js",
   "files": [
