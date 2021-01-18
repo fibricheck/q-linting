@@ -1,0 +1,45 @@
+name: build-and-publish
+on:
+  push:
+    branches:
+      - master
+      - dev
+      - feature/*
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+    - run: yarn
+    - run: yarn lerna bootstrap
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.QOMPIUM_NPM_TOKEN }}
+    - uses: actions/setup-node@v1
+      with:
+        registry-url: 'https://registry.npmjs.org'
+        scope: '@qompium'
+    - run: |
+        project_version=`node -p "require('./lerna.json').version"`
+
+        if [ "$GITHUB_REF" == "refs/heads/master" ]
+        then
+          version="$project_version"
+          dist_tag="latest"
+        else
+          short_commit_hash=${GITHUB_SHA:0:7}
+          version="$project_version-alpha.$GITHUB_RUN_NUMBER.$short_commit_hash"
+          dist_tag="alpha"
+        fi
+
+        yarn lerna publish $version \
+          --dist-tag $dist_tag \
+          --no-verify-access \
+          --no-git-tag-version \
+          --no-push \
+          -y
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.QOMPIUM_NPM_TOKEN }}

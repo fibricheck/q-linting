@@ -1,0 +1,14 @@
+{
+  "name": "q-linting",
+  "version": "0.0.0",
+  "description": "Q linting tools",
+  "author": "Qompium",
+  "license": "MIT",
+  "repository": "https://github.com/fibricheck/q-linting",
+  "scripts": {
+    "build": "yarn lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

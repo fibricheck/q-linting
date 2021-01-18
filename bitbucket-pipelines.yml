@@ -1,0 +1,39 @@
+pipelines:
+  branches:
+    '{feature/*,dev,master}':
+      - step: 
+          name: Read project state of base
+          image: fibricheck/aws-jq-vuepress:1.5.0
+          script:
+            - generate_build_info.sh
+          artifacts:
+            - build_info
+      - step: 
+          name: Publish
+          image: timbru31/node-alpine-git
+          script:
+            - |
+              set -e
+
+              # Set NPM Registry authentication
+              echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+            
+              # Install Lerna
+              yarn
+
+              # Load project state
+              source build_info
+
+              # Determine version
+              if [ "$branch_phase" == "master" ]
+              then
+                package_version="$project_version"
+                npm_tag="latest"
+              else
+                package_version="${project_version}-${branch_phase}.${BITBUCKET_BUILD_NUMBER}"
+                npm_tag="${branch_phase}"
+              fi
+
+              # Publish
+              echo "Publishing version: $package_version with tag: $npm_tag"
+              yarn lerna publish $package_version --dist-tag $npm_tag --no-git-reset --no-push --yes

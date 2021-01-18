@@ -1,0 +1,28 @@
+{
+  "name": "@qompium/eslint-config-q-react",
+  "version": "0.0.0",
+  "description": "Q linting for React",
+  "author": "Qompium",
+  "license": "UNLICENSED",
+  "repository": "https://github.com/fibricheck/q-linting",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@qompium/eslint-config-q-base": "0.0.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4"
+  },
+  "peerDependencies": {
+    "eslint": "^7.3.1",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "typescript": "^3.9.5"
+  }
+}
