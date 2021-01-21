@@ -17,11 +17,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }], // Allow unused vars with a leading underscore
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
@@ -34,8 +29,23 @@ module.exports = {
       'ignoreStrings': true,
       'ignoreTemplateLiterals': true
     }],
+    'arrow-parens': ['error', 'as-needed'],
+    'comma-dangle': ['error', {
+      'arrays': 'always-multiline',
+      'objects': 'always-multiline',
+      'imports': 'always-multiline',
+      'exports': 'always-multiline',
+      'functions': 'never'
+    }],
+    'function-paren-newline': ['error', 'multiline-arguments'],
+    'object-curly-newline': ['error', { 'consistent': true }],
+    'linebreak-style': 'off',
     'no-restricted-globals': 'off',
+    'no-await-in-loop': 'off',
+    'no-return-await': 'off',
     'no-continue': 'off',
+    'no-use-before-define': ['error', { "functions": false, "classes": false, "variables": true }],
+    'no-unused-vars': ['error', { 'args': 'after-used', 'argsIgnorePattern': '^_' }],
     'no-restricted-syntax': [
       'error',
       {
@@ -52,19 +62,10 @@ module.exports = {
         message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
     ],
-    'arrow-parens': ['error', 'as-needed'],
-    'comma-dangle': ['error', {
-      'arrays': 'always-multiline',
-      'objects': 'always-multiline',
-      'imports': 'always-multiline',
-      'exports': 'always-multiline',
-      'functions': 'never'
-    }],
-    'function-paren-newline': ['error', 'multiline-arguments'],
-    'no-await-in-loop': 'off',
-    'no-use-before-define': ['error', { "functions": false, "classes": true, "variables": true }],
-    'no-return-await': 'off',
-    'object-curly-newline': ['error', { 'consistent': true }],
-    'linebreak-style': 'off'
+    '@typescript-eslint/no-use-before-define': ['error', { "functions": false, "classes": false, "variables": true }],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used', 'argsIgnorePattern': '^_' }],
+    '@typescript-eslint/no-explicit-any': 'off'
   },
 };
