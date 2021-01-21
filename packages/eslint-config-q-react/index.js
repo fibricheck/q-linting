@@ -13,9 +13,9 @@ module.exports = {
     },
   },
   extends: [
+    '@qompium/eslint-config-q-base',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    '@qompium/eslint-config-q-base'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
