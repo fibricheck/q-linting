@@ -27,6 +27,29 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react'],
   rules: {
+    'indent': 'off',
+    'consistent-return': ['warn'],
+    'object-curly-spacing': ['error', 'always'],
+    'no-console': [DEV ? 'off' : 'error'],
+    'no-use-before-define': 'off',
+    'no-unused-expressions': 'off',
+    'no-underscore-dangle': ['error', { 'allow': ['_root', '_retry'] }],
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: [
+          'acc', // for reduce accumulators
+          'accumulator', // for reduce accumulators
+          'staticContext', // for ReactRouter context,
+          'draft', //for immer.js
+          'state', // for react toolkit
+          'config', // for Axios interceptors
+          'request' // for Axios interceptors
+        ],
+      },
+    ],
+    'no-shadow': 'off',
     '@typescript-eslint/indent': ['error', 2, {
       'ignoredNodes': ['TSTypeParameterInstantiation'], // https://github.com/typescript-eslint/typescript-eslint/issues/455
       'SwitchCase': 1
@@ -40,11 +63,9 @@ module.exports = {
       }
     }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used', 'argsIgnorePattern': '^_' }],
     'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-curly-spacing': ['error', { "when": "never", "children": { "when": "always" } }],
     'react/jsx-curly-newline': ['error', { 'multiline': "require", 'singleline': "consistent" }],
@@ -72,28 +93,6 @@ module.exports = {
         component: true,
         html: true,
       },
-    ],
-    'indent': 'off',
-    'consistent-return': ['warn'],
-    'object-curly-spacing': ['error', 'always'],
-    'no-console': [DEV ? 'off' : 'error'],
-    'no-use-before-define': 'off',
-    'no-unused-expressions': 'off',
-    'no-underscore-dangle': ['error', { 'allow': ['_root', '_retry'] }],
-    'no-param-reassign': [
-      'error',
-      {
-        props: true,
-        ignorePropertyModificationsFor: [
-          'acc', // for reduce accumulators
-          'accumulator', // for reduce accumulators
-          'staticContext', // for ReactRouter context,
-          'draft', //for immer.js
-          'state', // for react toolkit
-          'config', // for Axios interceptors
-          'request' // for Axios interceptors
-        ],
-      },
-    ],
+    ]
   },
 };
