@@ -40,7 +40,8 @@ module.exports = {
       }
     }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    '@typescript-eslint/no-shadow': 'error',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used', 'argsIgnorePattern': '^_' }],
@@ -75,7 +76,6 @@ module.exports = {
     'indent': 'off',
     'consistent-return': ['warn'],
     'object-curly-spacing': ['error', 'always'],
-    'no-shadow': 'off',
     'no-console': [DEV ? 'off' : 'error'],
     'no-use-before-define': 'off',
     'no-unused-expressions': 'off',
