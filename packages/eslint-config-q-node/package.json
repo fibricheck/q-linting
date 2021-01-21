@@ -14,10 +14,9 @@
   },
   "peerDependencies": {
     "eslint": "^7.3.1",
-    "typescript": "^3.9.5"
+    "typescript": "*"
   },
   "devDependencies": {
-    "eslint": "^7.3.1",
-    "typescript": "^3.9.5"
+    "eslint": "^7.3.1"
   }
 }
