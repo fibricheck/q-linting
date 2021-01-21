@@ -28,7 +28,12 @@ module.exports = {
     'import/no-dynamic-require': 'off',
     'operator-linebreak': ['error', 'after'],
     'global-require': 'off',
-    'max-len': ['error', { 'code': 150 }],
+    'max-len': ['error', {
+      'code': 150,
+      'ignoreUrls': true,
+      'ignoreStrings': true,
+      'ignoreTemplateLiterals': true
+    }],
     'no-restricted-globals': 'off',
     'no-continue': 'off',
     'no-restricted-syntax': [
