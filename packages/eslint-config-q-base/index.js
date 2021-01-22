@@ -46,6 +46,7 @@ module.exports = {
     'no-continue': 'off',
     'no-use-before-define': 'off',
     'no-unused-vars': 'off',
+    'no-shadow': 'off',
     'no-restricted-syntax': [
       'error',
       {
@@ -66,6 +67,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used', 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
-    '@typescript-eslint/no-explicit-any': 'off'
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-shadow': ['error']
   },
 };
