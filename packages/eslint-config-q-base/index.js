@@ -68,6 +68,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used', 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-shadow': ['error']
+    '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/no-floating-promises': 'error'
   },
 };
