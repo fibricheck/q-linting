@@ -16,6 +16,7 @@ module.exports = {
     '@qompium/eslint-config-q-base',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:react/jsx-runtime',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
