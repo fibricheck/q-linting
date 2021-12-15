@@ -13,10 +13,10 @@
     "@qompium/eslint-config-q-base": "0.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7.3.1",
+    "eslint": "^8.4.1",
     "typescript": "*"
   },
   "devDependencies": {
-    "eslint": "^7.3.1"
+    "eslint": "^8.4.1"
   }
 }
