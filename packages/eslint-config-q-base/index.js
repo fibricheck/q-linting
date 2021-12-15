@@ -47,6 +47,8 @@ module.exports = {
     'no-use-before-define': 'off',
     'no-unused-vars': 'off',
     'no-shadow': 'off',
+    'no-unsafe-optional-chaining': 'off',
+    'no-nonoctal-decimal-escape': 'off',
     'no-restricted-syntax': [
       'error',
       {
