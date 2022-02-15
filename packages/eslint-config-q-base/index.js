@@ -15,12 +15,13 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'eslint-comments'],
   rules: {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'import/no-dynamic-require': 'off',
+    "eslint-comments/no-unused-disable": "error",
     'operator-linebreak': ['error', 'after'],
     'global-require': 'off',
     'max-len': ['error', {
