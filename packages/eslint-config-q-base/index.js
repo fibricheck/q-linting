@@ -15,12 +15,13 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'eslint-comments'],
   rules: {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'import/no-dynamic-require': 'off',
+    "eslint-comments/no-unused-disable": "error",
     'operator-linebreak': ['error', 'after'],
     'global-require': 'off',
     'max-len': ['error', {
@@ -65,6 +66,8 @@ module.exports = {
         message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
     ],
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": ["error"],
     '@typescript-eslint/no-use-before-define': ['error', { "functions": false, "classes": false, "variables": true }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
