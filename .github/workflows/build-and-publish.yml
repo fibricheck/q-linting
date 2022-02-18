@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - dev
+      - OTH-520-make-feature-build
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
