@@ -67,6 +67,7 @@ module.exports = {
       },
     ],
     "no-useless-constructor": "off",
+    'no-void': ['error', { 'allowAsStatement': true }],
     "@typescript-eslint/no-useless-constructor": ["error"],
     '@typescript-eslint/no-use-before-define': ['error', { "functions": false, "classes": false, "variables": true }],
     '@typescript-eslint/explicit-function-return-type': 'off',
