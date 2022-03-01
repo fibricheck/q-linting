@@ -26,7 +26,7 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['react'],
   rules: {
     'indent': 'off',
     'consistent-return': ['warn'],
