@@ -37,7 +37,7 @@ module.exports = {
       'error',
       {
         mustNotMatch: {
-          it: [/^Should.*/.source, "Tests titles must not start with should"],
+          it: [/^(Should|A request|Correctly).*/i.source, "Tests titles must not start with should, a request or correctly"],
         },
         mustMatch: {
           it: [/^[A-Z].*/.source, "Test titles must start with an uppercase letter"]
