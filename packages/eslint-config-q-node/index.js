@@ -6,6 +6,13 @@ module.exports = {
     // We should switch to a good logging library.
     // But in the meantime we keep this rule disabled.
     'no-console': 'off',
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
+    "import/order": ["error", {
+      alphabetize: {
+        order: 'asc', /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */
+        caseInsensitive: true /* ignore case. Options: [true, false] */
+      }
+    }],
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-disabled-tests.md
     'jest/no-disabled-tests': 'error',
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-duplicate-hooks.md
