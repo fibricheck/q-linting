@@ -13,6 +13,8 @@ module.exports = {
         caseInsensitive: true /* ignore case. Options: [true, false] */
       }
     }],
+    // https://eslint.org/docs/rules/curly
+    curly: ['error', 'all'],
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-disabled-tests.md
     'jest/no-disabled-tests': 'error',
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-duplicate-hooks.md
