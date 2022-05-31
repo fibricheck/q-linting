@@ -13,6 +13,8 @@ module.exports = {
         caseInsensitive: true /* ignore case. Options: [true, false] */
       }
     }],
+    // https://eslint.org/docs/rules/curly
+    curly: ['error', 'all'],
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-disabled-tests.md
     'jest/no-disabled-tests': 'error',
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-duplicate-hooks.md
@@ -25,6 +27,8 @@ module.exports = {
     'jest/no-standalone-expect': 'error',
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-hooks-on-top.md
     'jest/prefer-hooks-on-top': 'error',
+    // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-hooks-in-order.md
+    'jest/prefer-hooks-in-order': 'error',
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-spy-on.md
     'jest/prefer-spy-on': 'error',
     // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-strict-equal.md
