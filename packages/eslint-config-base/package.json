@@ -1,6 +1,6 @@
 {
   "name": "@fibricheck/eslint-config-base",
-  "version": "0.0.0",
+  "version": "2.0.0-alpha.0",
   "description": "FibriCheck Base ESLint Config",
   "author": "FibriCheck",
   "license": "MIT",
@@ -12,10 +12,10 @@
     "rules/*"
   ],
   "peerDependencies": {
+    "@typescript-eslint/parser": "^8.28.0",
     "eslint": ">=9.0.0",
     "eslint-plugin-import": ">= 2.31.0",
-    "typescript": ">= 5.0.0",
-    "@typescript-eslint/parser": "^8.28.0"
+    "typescript": ">= 5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",

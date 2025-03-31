@@ -1,6 +1,6 @@
 {
   "name": "@qompium/eslint-config-q-react",
-  "version": "0.0.0",
+  "version": "2.0.0-alpha.0",
   "description": "Q linting for React",
   "author": "Qompium",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@qompium/eslint-config-q-base": "0.0.0",
+    "@qompium/eslint-config-q-base": "^2.0.0-alpha.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",

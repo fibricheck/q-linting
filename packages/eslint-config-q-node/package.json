@@ -1,6 +1,6 @@
 {
   "name": "@qompium/eslint-config-q-node",
-  "version": "0.0.0",
+  "version": "2.0.0-alpha.0",
   "description": "Q linting node",
   "author": "Qompium",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@qompium/eslint-config-q-base": "0.0.0",
+    "@qompium/eslint-config-q-base": "^2.0.0-alpha.0",
     "eslint-plugin-jest": "^26.4.5"
   },
   "peerDependencies": {
