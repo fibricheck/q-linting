@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["jest", "import", "oxc", "node"],
+  "env": {},
+  "globals": {},
+  "settings": {},
+  "rules": {
+    "curly": "error",
+    "default-case-last": "error",
+    "default-param-last": "error",
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+    "guard-for-in": "warn",
+    "grouped-accessor-pairs": "error",
+    "no-duplicate-imports": "error",
+    "no-magic-numbers": ["warn", { "ignore": [0, 1], "ignoreEnums": true }],
+    "no-multi-assign": "error",
+    "no-nested-ternary": "error",
+    "no-new-func": "error",
+    "no-template-curly-in-string": "error",
+    "prefer-destructuring": "warn",
+    "prefer-object-has-own": "error",
+    "prefer-object-spread": "error",
+    "prefer-promise-reject-errors": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "first": "error",
+    "unicorn/throw-new-error": "error",
+    "unicorn/no-null": "error",
+    "typescript/prefer-for-of": "error",
+    "typescript/no-explicit-any": "error"
+  }
+}

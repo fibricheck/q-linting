@@ -1,0 +1,32 @@
+{
+  "name": "oxlint-base",
+  "version": "2.0.0-alpha.0",
+  "description": "Oxlint base config for FibriCheck",
+  "keywords": [
+    "oxlint",
+    "config",
+    "base"
+  ],
+  "author": "FibriCheck",
+  "homepage": "https://github.com/fibricheck/q-linting#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibricheck/q-linting.git"
+  },
+  "files": [
+    ".oxlintrc.json"
+  ],
+  "scripts": {
+    
+  },
+  "bugs": {
+    "url": "https://github.com/fibricheck/q-linting/issues"
+  },
+  "devDependencies": {
+    "oxlint": "^1.15.0"
+  },
+  "peerDependencies": {
+    "oxlint": ">=1.15.0"
+  }
+}
