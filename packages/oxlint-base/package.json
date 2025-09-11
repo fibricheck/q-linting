@@ -2,6 +2,7 @@
   "name": "@fibricheck/oxlint-base",
   "version": "2.0.0-alpha.0",
   "description": "Oxlint base config for FibriCheck",
+  "private": "true",
   "keywords": [
     "oxlint",
     "config",
